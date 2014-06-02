@@ -44,12 +44,8 @@ For source code, or to contribute, see the
     cabal update
     cabal install yeganesh
 
-### Installing requirements on [Ubuntu Linux](http://www.ubuntu.com/)
+> it's possible to maintain the xmond, xmonad-contrib xmobar within cabal (newer packages but less stable)
 
-    sudo aptitude install xmonad libghc6-xmonad-contrib-dev xmobar stalonetray \
-        suckless-tools scrot cabal-install
-    cabal update
-    cabal install yeganesh
 
 ## Installation
 
@@ -58,9 +54,11 @@ you may already have, cloning the git repository, and updating your PATH.
 
     cd
     mv .xmonad .xmonad.orig
-    git clone https://github.com/vicfryzel/xmonad-config.git .xmonad
-    echo "export PATH=\$PATH:~/.cabal/bin:~/.xmonad/bin" >> ~/.bashrc
+    git clone https://github.com/sadid/xmonad-config.git .xmonad
+    echo "export PATH=\$PATH:$HOME/.cabal/bin:$HOME/.xmonad/bin" >> ~/.bashrc
     source ~/.bashrc
+
+> $HOME variable is safer than ~
 
 Once xmonad-config is installed, you also need to ensure you can actually
 start xmonad.  The mechanism to do this varies based on each environment, but
