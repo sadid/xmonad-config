@@ -14,7 +14,7 @@ xmonad-config is the [xmonad](http://xmonad.org/) configuration used by [Vic Fry
 * [yeganesh 2.2](http://dmwit.com/yeganesh/)
 * [scrot 0.8](http://freshmeat.net/projects/scrot/)
 * Optionals:
-    + [nmcli_dmenu Optional](https://github.com/firecat53/nmcli-dmenu/)
+    + [nmcli_dmenu](https://github.com/firecat53/nmcli-dmenu/)
 
 ### Installing requirements on [Arch Linux](http://www.archlinux.org/)
 
