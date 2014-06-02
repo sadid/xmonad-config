@@ -43,16 +43,6 @@ Once xmonad-config is installed, you also need to ensure you can actually
 start xmonad.  The mechanism to do this varies based on each environment, but
 here are some instructions for some common login managers.
 
-### Starting xmonad from lightdm, xdm, kdm, or gdm
-
-    ln -s ~/.xmonad/xsession ~/.xsession
-    # Logout, login from lightdm/xdm/kdm/gdm
-
-### Starting xmonad from slim
-
-    ln -s ~/.xmonad/xsession ~/.xinitrc
-    # Logout, login from slim
-
 
 ## Keyboard shortcuts
 
