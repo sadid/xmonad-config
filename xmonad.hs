@@ -2,6 +2,8 @@
 -- Author: Vic Fryzel
 -- http://github.com/vicfryzel/xmonad-config
 
+-- small modification for changing keybaord bindings and multiple desktops
+
 import System.IO
 import System.Exit
 import XMonad
@@ -32,7 +34,7 @@ myTerminal = "/usr/bin/gnome-terminal"
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
+myWorkspaces = ["1:T","2:W","3:C","4:D","5:Z"] ++ map show [6..9]
 
 
 ------------------------------------------------------------------------
@@ -50,16 +52,14 @@ myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"       --> doShift "2:web"
-    , className =? "Google-chrome"  --> doShift "2:web"
+    [ className =? "Chromium"       --> doShift "2:W"
+    , className =? "Google-chrome"  --> doShift "2:W"
     , resource  =? "desktop_window" --> doIgnore
     , className =? "Galculator"     --> doFloat
     , className =? "Steam"          --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "gpicview"       --> doFloat
     , className =? "MPlayer"        --> doFloat
-    , className =? "VirtualBox"     --> doShift "4:vm"
-    , className =? "Xchat"          --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
 
@@ -118,7 +118,7 @@ myBorderWidth = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask = mod1Mask
+myModMask = mod4Mask
 
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
