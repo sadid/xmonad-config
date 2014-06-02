@@ -4,31 +4,6 @@ xmonad-config is the [xmonad](http://xmonad.org/) configuration used by [Vic Fry
 > This is just a personal fork with some backup purposes...
 
 
-## Introduction
-
-If you are unfamiliar with xmonad, it is a tiling window manager that is
-notoriously minimal, stable, beautiful, and featureful.  If you find yourself
-spending a lot of time organizing or managing windows, you may consider trying
-xmonad.
-
-However, xmonad can be somewhat difficult to configure if you're new to
-Haskell or even to xmonad itself.
-
-This project contains a completely working and very usable xmonad
-configuration "out of the box".  If you are just starting out with xmonad,
-this will give you a configuration that I personally use for around 12 hours
-every day.  Thought has been put into the colors, key bindings, layouts,
-and supplementary scripts to make life easier.
-
-This project is also recommended for advanced xmonad users, who may just not
-want to reinvent the wheel.  All source provided with this project is well
-documented and simple to customize.
-
-![Screenshot of xmonad-config](https://raw.github.com/vicfryzel/xmonad-config/master/screenshot.png)
-For source code, or to contribute, see the
-[xmonad-config project page](http://github.com/vicfryzel/xmonad-config).
-
-
 ## Requirements
 
 * xmonad 0.9.1 or 0.9.2
@@ -38,6 +13,8 @@ For source code, or to contribute, see the
 * [dmenu 4.0](http://tools.suckless.org/dmenu/)
 * [yeganesh 2.2](http://dmwit.com/yeganesh/)
 * [scrot 0.8](http://freshmeat.net/projects/scrot/)
+* Optionals:
+    + [nmcli_dmenu Optional](https://github.com/firecat53/nmcli-dmenu/)
 
 ### Installing requirements on [Arch Linux](http://www.archlinux.org/)
 
@@ -46,7 +23,7 @@ For source code, or to contribute, see the
     cabal update
     cabal install yeganesh
 
-> it's possible to maintain the xmond, xmonad-contrib xmobar within cabal (newer packages but less stable)
+> it's possible to maintain the xmond, xmonad-contrib xmobar and yeganesh within cabal (newer packages but less stable)
 
 
 ## Installation
