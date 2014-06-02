@@ -1,6 +1,7 @@
 # xmonad-config
 xmonad-config is the [xmonad](http://xmonad.org/) configuration used by [Vic Fryzel](https://github.com/vicfryzel/xmonad-config).
-This is just a personal fork for future use.
+
+> This is just a personal fork with some backup purposes...
 
 
 ## Introduction
