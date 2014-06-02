@@ -133,3 +133,22 @@ layout after a fullscreen application may have turned off one of the screens.
 
 Colors set in the xmobar config and dmenu script are meant to coincide with the
 [IR_Black terminal and vim themes](http://blog.infinitered.com/entries/show/6).
+
+
+## Other configs related to xmonad
+
+
+### .xinitrc file
+
+    #set theh cursor (By defult, xmonad does not set an X cursor)
+    xsetroot -cursor_name left_ptr
+
+    #wallpaper (habak is very capable to do more complicated stuff)
+    habak -ms ~/Pictures/MSbg/Golchin/riga.jpg
+
+    #start xmonad
+    exec xmonad
+
+    #terminus-font are installed in /usr/share/fonts/local which is not in the font path and so X11 can't find them here is accord to wiki perform by sadid:
+    xset +fp /usr/share/fonts/local
+    xset fp rehash
