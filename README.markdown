@@ -1,5 +1,6 @@
 # xmonad-config
-xmonad-config is the [xmonad](http://xmonad.org/) configuration used by Vic Fryzel.
+xmonad-config is the [xmonad](http://xmonad.org/) configuration used by [Vic Fryzel](https://github.com/vicfryzel/xmonad-config).
+This is just a personal fork for future use.
 
 
 ## Introduction
@@ -170,3 +171,42 @@ Colors set in the xmobar config and dmenu script are meant to coincide with the
     #terminus-font are installed in /usr/share/fonts/local which is not in the font path and so X11 can't find them here is accord to wiki perform by sadid:
     xset +fp /usr/share/fonts/local
     xset fp rehash
+
+
+### .bashrc
+
+    #
+    # ~/.bashrc
+    #
+
+    # If not running interactively, don't do anything
+    [[ $- != *i* ]] && return
+
+    alias ls='ls --color=auto'
+    PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+    source /usr/share/git/completion/git-completion.bash
+    source /usr/share/git/completion/git-prompt.sh
+    export PATH="$PATH:$HOME/.cabal/bin:$HOME/.xmonad/bin:~/bin"
+
+    export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:$MANPATH
+
+    # according to wiki arch on man page: this lead to colored man pages:
+    man() {
+        env LESS_TERMCAP_mb=$'\E[01;31m' \
+        LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+        LESS_TERMCAP_me=$'\E[0m' \
+        LESS_TERMCAP_se=$'\E[0m' \
+        LESS_TERMCAP_so=$'\E[38;5;246m' \
+        LESS_TERMCAP_ue=$'\E[0m' \
+        LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+        man "$@"
+    }
+
+    alias t='python ~/bin/t.py --task-dir /run/media/sadid/DDesk/Tasks/Tasks.md --list tasks'
+    alias tW='python ~/bin/t.py --task-dir /run/media/sadid/DDesk/Tasks/Win.md --list tasks'
+    alias tL='python ~/bin/t.py --task-dir /run/media/sadid/DDesk/Tasks/Lin.md --list tasks'
+    alias tF='python ~/bin/t.py --task-dir /run/media/sadid/DDesk/Tasks/Fun.md --list tasks'
+    alias tD='python ~/bin/t.py --task-dir /run/media/sadid/DDesk/Tasks/Workflow.md --list tasks'
+
+    export PATH=$PATH:/home/sadid/.cabal/bin:/home/sadid/.xmonad/bin
